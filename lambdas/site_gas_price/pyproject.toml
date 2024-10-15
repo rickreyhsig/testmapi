@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "mobile-api-site-gas-price"
+version = "0.0.0"
+description = "mobile-api-lambdas"
+repository = "https://github.com/upside-services/mobile-api-lambdas/"
+authors = ["GetUpside <info@getupside.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "~=1.9"
+lib-api-gateway = "^3.5.0"
+python-json-logger = "^2.0.4"
+simplejson = "3.17.0"
+mapi-common = {path = "../mapi_common/", develop = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+mock = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

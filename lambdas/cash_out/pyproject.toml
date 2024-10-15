@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "mobile-api-cash-out"
+version = "0.0.0"
+description = "mobile-api-lambdas"
+repository = "https://github.com/upside-services/mobile-api-lambdas/"
+authors = ["GetUpside <info@getupside.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+account-service-client = "^3.1.1"
+aws-lambda-context = "~=1.1"
+aws-lambda-powertools = { extras = ["all"], version = "^2.11.0" }
+cash-out-service-client = "^0.16.0"
+lib-api-gateway = "^3.5.0"
+lib-mobile-api = "^3.70.0"
+lib-partner-user = "~=2.0"
+lock-service-client = "~=1.0"
+payment-info-service-client = "~=1.6"
+python-json-logger = "~=2.0"
+upside-core = "^9.2.0"
+user-service-client = "^3.25.0"
+user-trait-service-client = "^3.0.0"
+mapi-common = {path = "../mapi_common/", develop = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+mock = "*"
+pip-tools = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

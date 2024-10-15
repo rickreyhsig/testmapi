@@ -1,0 +1,67 @@
+[tool.poetry]
+name = "mobile-api-get-user-offers"
+version = "0.0.0"
+description = "mobile-api-lambdas"
+repository = "https://github.com/upside-services/mobile-api-lambdas/"
+authors = ["GetUpside <info@getupside.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple/"
+default = true
+
+[tool.poetry.dependencies]
+aws-lambda-powertools = { extras = ["all"], version = "^2.11.0" }
+python = "^3.9"
+account-service-client = "^3.1.1"
+attribute-service-client = "^2.0.0"
+lib-async = "~=0.2"
+aws-lambda-context = "~=1.1"
+baseline-service-client = "~=5.0"
+boto3 = "~=1.21"
+expiringdict = "~=1.1"
+ledger-service-client = "~=1.7"
+lib-api-gateway = "~=3.1"
+lib-mobile-api = "^3.70.0"
+lib-segment-python = "^2.1.0"
+lib-pwgc-db = "^9.16.0"
+lib-inflow-api = "^0.50"
+merchant-service-client = "^2.7.2"
+mz2geohash = "~=1.1"
+offer-service-client = "~=1.185"
+payment-info-service-client = "~=1.78.0"
+python-json-logger = "~=2.0"
+redis = "~=3.5"
+upside-core = "^9.2.0"
+upside-model = "^6.31.0"
+upside-pagination = "~=1.0"
+user-service-client = "~=3.1"
+user-trait-service-client = "^3.0.0"
+codeguru-profiler-agent = "~=1.2.1"
+ml-ranking-client = "~=1.1.0"
+boto3-stubs = {extras = ["lambda"], version = "^1.34.75"}
+mapi-common = {path = "../mapi_common/", develop = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+mock = "*"
+moto = "*"
+lib-test = "*"
+snapshottest = "*"
+freezegun = "*"
+markupsafe = '2.1.1'
+pytest-mock = "^3.13.0"
+
+
+[build-system]
+requires = ["poetry-core<=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+python_classes="Test* Int*"
+python_functions="test_* int_*"
+python_files="test_* int_*"

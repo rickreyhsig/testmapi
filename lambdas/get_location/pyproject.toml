@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "mobile-api-get-location"
+version = "0.0.0"
+description = "mobile-api-lambdas"
+repository = "https://github.com/upside-services/mobile-api-lambdas/"
+authors = ["GetUpside <info@getupside.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+alder-api-python-client = "~=1.4"
+boto3 = "~=1.22"
+expiringdict = "~=1.1"
+lib-api-gateway = "~=3.1"
+lib-mobile-api = "^3.70.0"
+lib-pwgc-db = "~9.9.6"
+merchant-service-client = "^2.7.2"
+mz2geohash = "~=1.1"
+offer-service-client = ">=1.147"
+redis = "~=3.5"
+upside-core = "^9.2.0"
+upside-model = "^6.31.0"
+user-trait-service-client = "~=2.6"
+mapi-common = {path = "../mapi_common/", develop = true}
+
+[tool.poetry.dev-dependencies]
+aws-lambda-context = "*"
+coverage = "*"
+pytest = "*"
+pytest-cov = "*"
+mock = "*"
+lib-test = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

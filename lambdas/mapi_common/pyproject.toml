@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "mapi-common"
+version = "0.1.0"
+description = "A pyproject specifically for the common shared directory"
+authors = ["Upside <info@getupside.com>"]
+packages = [
+    { include = "common" }
+]
+exclude = ["tests"]
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aws-lambda-powertools = {extras = ["tracer"], version = "^2.17.0"}
+upside-structlog = "1.1.0"
+
+[tool.poetry.dev-dependencies]
+mock = "^4.0.3"
+pytest = "^6.1"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

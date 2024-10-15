@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "mobile-api-process-deeplink"
+version = "0.0.0"
+description = "mobile-api-lambdas"
+repository = "https://github.com/upside-services/mobile-api-lambdas/"
+authors = ["GetUpside <info@getupside.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aws-lambda-context = "~=1.1"
+lib-api-gateway = "^3.5.0"
+lib-mobile-api = "^3.70.0"
+lib-mapi-user-offer = "^0.10.2"
+user-trait-service-client = "^3.0.0"
+python-json-logger = "~=2.0"
+upside-core = "^9.2.0"
+upside-model = "^6.31.0"
+pyjwt = "~=2.1"
+pynamodb = "~=5.2"
+lib-partner-user = "~=2.0"
+cryptography = "3.4.7"
+pyopenssl = "20.0.1"
+mapi-common = {path = "../mapi_common/", develop = true}
+
+[tool.poetry.dev-dependencies]
+coverage = "*"
+pytest = "*"
+pytest-cov = "*"
+mock = "*"
+lib-test = "*"
+freezegun = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

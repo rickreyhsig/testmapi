@@ -1,0 +1,51 @@
+[tool.poetry] 
+name = "mobile-api-support-resource"
+version = "0.0.0"
+description = "support-resource"
+repository = "https://github.com/upside-services/mobile-api-lambdas/"
+authors = ["GetUpside <info@getupside.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+account-service-client = "1.5.0"
+attribute-service-client = "0.0.7"
+alder-api-python-client = "1.4.0"
+baseline-service-client = "5.0.2"
+boto3 = "1.9.28"
+expiringdict = "1.1.4"
+facebook-sdk = "2.0.0"
+ledger-service-client = "1.7.0"
+lib-api-gateway = "2.0"
+lib-mobile-api = "2.0"
+lib-segment-python = "0.2.1"
+merchant-service-client = "1.52.0"
+mz2geohash = "1.1.0"
+offer-service-client = "1.138"
+optimizely-sdk = "3.5"
+payment-info-service-client = "1.69.0"
+python-json-logger = "0.1.11"
+redis = "3.5.3"
+receiptless-service-client = "0.12.1"
+runbook-service-client = "2.6.0"
+tenacity = "4.8.0"
+upside-core = "6.35.4"
+upside-model = "6.21"
+upside-pagination = "1.0.4"
+user-service-client = "1.66"
+zenpy = "2.0.19"
+mapi-common = {path = "../mapi_common/", develop = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+pylint = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

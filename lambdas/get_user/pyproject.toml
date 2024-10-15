@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "mobile-api-get-user"
+version = "0.0.0"
+description = "mobile-api-lambdas"
+repository = "https://github.com/upside-services/mobile-api-lambdas/"
+authors = ["GetUpside <info@getupside.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+account-service-client = "^3.1.1"
+attribute-service-client = "^2.0.0"
+aws-lambda-context = "~=1.1"
+codeguru-profiler-agent = "~=1.2.2"
+ledger-service-client = "~=1.7"
+lib-api-gateway = "^3.5.0"
+lib-mobile-api = "^3.70.0"
+lib-segment-python = "^2.1.0"
+payment-info-service-client = "~=1.69"
+python-json-logger = "~=2.0"
+pytz = "^2022.2.1"
+runbook-service-client = "~=2.6"
+simplejson = "3.17.0"
+tenacity = "~=4.8"
+upside-core = "^9.2.0"
+user-service-client = "^3.25.0"
+user-trait-service-client = "^3.0.0"
+mapi-common = {path = "../mapi_common/", develop = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+mock = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

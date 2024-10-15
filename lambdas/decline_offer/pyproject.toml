@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "mobile-api-decline-offer"
+version = "0.0.0"
+description = "mobile-api-lambdas"
+repository = "https://github.com/upside-services/mobile-api-lambdas/"
+authors = ["GetUpside <info@getupside.com>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "jfrog"
+url = "https://upside.jfrog.io/upside/api/pypi/upside-python/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = "^3.9"
+lib-api-gateway = "^3.6.1"
+lib-mobile-api = "^3.70.0"
+merchant-service-client = "^2.7.2"
+offer-service-client = "^1.173.5"
+payment-info-service-client = "^1.69.0"
+python-json-logger = "^2.0.4"
+upside-core = "^9.2.0"
+user-service-client = "^3.25.0"
+lib-mapi-user-offer = "^0.18.0"
+lib-metrics = "^1.2.1"
+mapi-common = {path = "../mapi_common/", develop = true}
+
+
+[tool.poetry.dev-dependencies]
+freezegun = "*"
+coverage = "*"
+pytest = "*"
+pytest-cov = "*"
+mock = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
