@@ -6,6 +6,6 @@
 version: 2
 updates:
   - package-ecosystem: "pip" # See documentation for possible values
-    directory: "./process_deeplink" # Location of package manifests
+    directory: "./lambdas/process_deeplink" # Location of package manifest
     schedule:
       interval: "daily"
